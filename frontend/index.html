@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Recipe Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 2rem auto;
+            max-width: 700px;
+            background-color: #f0f4f8;
+            color: #333;
+            padding: 1rem;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: 600;
+            color: #34495e;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.6rem 0.8rem;
+            margin-top: 0.3rem;
+            box-sizing: border-box;
+            font-size: 1rem;
+            border: 1.5px solid #ccc;
+            border-radius: 6px;
+            transition: border-color 0.3s ease;
+        }
+        input:focus, textarea:focus {
+            border-color: #2980b9;
+            outline: none;
+            box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+        }
+        button {
+            margin-top: 1.5rem;
+            padding: 0.75rem 2rem;
+            font-size: 1.1rem;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: 600;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #1c5980;
+        }
+        #results {
+            margin-top: 2rem;
+        }
+        .recipe {
+            background: white;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1.2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        .recipe:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        .recipe h3 {
+            margin: 0 0 0.6rem 0;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+        .recipe ul {
+            margin: 0;
+            padding-left: 1.3rem;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Recipe Generator</h1>
+    <form id="recipeForm">
+        <label for="ingredients">Ingredients (comma separated):</label>
+        <input type="text" id="ingredients" name="ingredients" required />
+
+        <label for="dietary">Dietary Restrictions (comma separated, optional):</label>
+        <input type="text" id="dietary" name="dietary"  />
+
+        <button type="submit">Get Recipes</button>
+    </form>
+
+    <div id="results"></div>
+
+    <div class="footer">Powered by AI Recipe Generator</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

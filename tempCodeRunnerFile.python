@@ -1,0 +1,29 @@
+# Regenerating the PowerPoint presentation since the previous file wasn't saved correctly
+from pptx import Presentation
+from pptx.util import Pt
+
+# Create a new PowerPoint presentation
+ppt = Presentation()
+title_slide_layout = ppt.slide_layouts[0]
+slide = ppt.slides.add_slide(title_slide_layout)
+slide.shapes.title.text = title
+slide.placeholders[1].text = "A summary of research gaps and a proposed ML solution using nature-inspired optimization."
+
+bullet_slide_layout = ppt.slide_layouts[1]
+for section, items in sections.items():
+    slide = ppt.slides.add_slide(bullet_slide_layout)
+    slide.shapes.title.text = section
+    body_shape = slide.shapes.placeholders[1]
+    tf = body_shape.text_frame
+    tf.clear()
+    for item in items:
+        p = tf.add_paragraph()
+        p.text = item
+        p.level = 0
+        p.font.size = Pt(16)
+
+# Save the PPT file
+ppt_output_path = "/mnt/data/Epilepsy_Research_Proposal.pptx"
+ppt.save(ppt_output_path)
+
+ppt_output_path

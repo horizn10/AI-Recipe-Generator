@@ -91,7 +91,7 @@ Enter dietary restrictions separated by commas (or leave blank): peanuts
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/AI-Recipe-Generator.git
+git clone https://github.com/horizn10/AI-Recipe-Generator.git
 cd AI-Recipe-Generator
 ```
 
